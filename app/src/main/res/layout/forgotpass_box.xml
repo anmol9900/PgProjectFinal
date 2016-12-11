@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="Enter Registered Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:id="@+id/DPG_Address"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:id="@+id/fp_email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/DPG_Address" />
+
+    <Button
+        android:text="Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email"
+        android:layout_marginTop="30dp"
+        android:id="@+id/fp_button"
+        android:onClick="EmailPass"
+        android:layout_gravity="center"
+        android:textAlignment="center" />
+
+</LinearLayout>
