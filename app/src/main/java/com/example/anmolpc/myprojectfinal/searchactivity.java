@@ -3,27 +3,21 @@ package com.example.anmolpc.myprojectfinal;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.Build;
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -86,7 +80,7 @@ public class searchactivity extends Fragment {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("LoginCheck", Context.MODE_PRIVATE);
         String check=sharedPreferences.getString("LoggedIn","null");
         if(check.equals("Yes")) {
-            oid_val=sharedPreferences.getInt("Id",0);
+            oid_val=sharedPreferences.getInt("Id",1);
         }
         rcy_view_lst.addOnItemTouchListener(
                 new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
