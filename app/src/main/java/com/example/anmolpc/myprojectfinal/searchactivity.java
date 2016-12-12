@@ -80,7 +80,7 @@ public class searchactivity extends Fragment {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("LoginCheck", Context.MODE_PRIVATE);
         String check=sharedPreferences.getString("LoggedIn","null");
         if(check.equals("Yes")) {
-            oid_val=sharedPreferences.getInt("Id",1);
+            oid_val=sharedPreferences.getInt("Id",0);
         }
         rcy_view_lst.addOnItemTouchListener(
                 new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
